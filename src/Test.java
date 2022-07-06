@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Test {
 
+    //深度优先探索
     public static void dfs(String s, int i, int num, ArrayList<String> al){
         //判断插入完成的是否满足
         if(num==0){
@@ -20,6 +21,13 @@ public class Test {
             al.add(s);
             return;
         }
+    }
+
+    //调用深度优先探索并存储合法的IP地址
+    public static ArrayList<String> restoreIpAddresses(String s) {
+        ArrayList<String> al=new ArrayList<String>();
+        dfs(s,-1,3,al);
+        return al;
     }
 
 
